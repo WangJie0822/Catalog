@@ -1,4 +1,5 @@
 [versions]
+# 版本号
 junit = "4.13"
 kotlin = "1.7.10"
 androidx-core = "1.8.0"
@@ -24,6 +25,10 @@ skin-support = "4.0.5"
 alibaba-arouter = "1.5.2"
 tencent-mmkv = "1.2.13"
 didi-doraemonkit = "1.1.2"
+# maven仓库
+maven-aliyun-plugin = "https://maven.aliyun.com/repository/gradle-plugin/"
+maven-aliyun-public = "https://maven.aliyun.com/repository/public/"
+maven-aliyun-google = "https://maven.aliyun.com/repository/google/"
 
 [libraries]
 # junit
@@ -166,20 +171,20 @@ google-material = { group = "com.google.android.material", name = "material", ve
 # zxing [Github](https://github.com/zxing/zxing)
 google-zxing-core = { group = "com.google.zxing", name = "core", version = "3.4.1" }
 # gson [Github](https://github.com/google/gson)
-google-code-gson = { group = "com.google.code.gson", name = "gson", version = "2.9.0" }
+google-gson = { group = "com.google.code.gson", name = "gson", version = "2.9.0" }
 
 # Koin3 [Github](https://github.com/InsertKoinIO/koin) [指南](https://insert-koin.io/)
-koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin3" }
-koin-ktor = { group = "io.insert-koin", name = "koin-ktor", version.ref = "koin3" }
-koin-logger-slf4j = { group = "io.insert-koin", name = "koin-logger-slf4j", version.ref = "koin3" }
-koin-test = { group = "io.insert-koin", name = "koin-test", version.ref = "koin3" }
-koin-test-junit4 = { group = "io.insert-koin", name = "koin-test-junit4", version.ref = "koin3" }
-koin-test-junit5 = { group = "io.insert-koin", name = "koin-test-junit5", version.ref = "koin3" }
-koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin3" }
-koin-android-compat = { group = "io.insert-koin", name = "koin-android-compat", version.ref = "koin3" }
-koin-android-workmanager = { group = "io.insert-koin", name = "koin-android-workmanager", version.ref = "koin3" }
-koin-android-navigation = { group = "io.insert-koin", name = "koin-android-navigation", version.ref = "koin3" }
-koin-android-compose = { group = "io.insert-koin", name = "koin-android-compose", version.ref = "koin3" }
+koin3-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin3" }
+koin3-ktor = { group = "io.insert-koin", name = "koin-ktor", version.ref = "koin3" }
+koin3-logger-slf4j = { group = "io.insert-koin", name = "koin-logger-slf4j", version.ref = "koin3" }
+koin3-test = { group = "io.insert-koin", name = "koin-test", version.ref = "koin3" }
+koin3-test-junit4 = { group = "io.insert-koin", name = "koin-test-junit4", version.ref = "koin3" }
+koin3-test-junit5 = { group = "io.insert-koin", name = "koin-test-junit5", version.ref = "koin3" }
+koin3-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin3" }
+koin3-android-compat = { group = "io.insert-koin", name = "koin-android-compat", version.ref = "koin3" }
+koin3-android-workmanager = { group = "io.insert-koin", name = "koin-android-workmanager", version.ref = "koin3" }
+koin3-android-navigation = { group = "io.insert-koin", name = "koin-android-navigation", version.ref = "koin3" }
+koin3-android-compose = { group = "io.insert-koin", name = "koin-android-compose", version.ref = "koin3" }
 
 # Glide [Github](https://github.com/bumptech/glide)
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
@@ -199,9 +204,9 @@ squareup-retrofit2-converter-moshi = { group = "com.squareup.retrofit2", name = 
 squareup-retrofit2-converter-kotlin = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version = "0.8.0" }
 
 # SmartRefreshLayout [Github](https://github.com/scwang90/SmartRefreshLayout)
-scwang-smart-refresh-layout = { group = "com.scwang.smart", name = "refresh-layout-kernel", version.ref = "scwang-smart" }
-scwang-smart-refresh-header-classics = { group = "com.scwang.smart", name = "refresh-header-classics", version.ref = "scwang-smart" }
-scwang-smart-refresh-footer-classics = { group = "com.scwang.smart", name = "refresh-footer-classics", version.ref = "scwang-smart" }
+scwang-smartRefresh-layout = { group = "com.scwang.smart", name = "refresh-layout-kernel", version.ref = "scwang-smart" }
+scwang-smartRefresh-classicsHeader = { group = "com.scwang.smart", name = "refresh-header-classics", version.ref = "scwang-smart" }
+scwang-smartRefresh-classicsFooter = { group = "com.scwang.smart", name = "refresh-footer-classics", version.ref = "scwang-smart" }
 
 # 状态栏工具 [Github](https://github.com/gyf-dev/ImmersionBar)
 immersionbar = { group = "com.geyifeng.immersionbar", name = "immersionbar", version.ref = "immersionbar" }
@@ -215,11 +220,11 @@ coil-svg = { group = "io.coil-kt", name = "coil-svg", version.ref = "coil" }
 coil-video = { group = "io.coil-kt", name = "coil-video", version.ref = "coil" }
 
 # 换肤 [Github](https://github.com/ximsfei/Android-skin-support)
-skin-support = { group = "skin.support", name = "skin-support", version.ref = "skin-support" }
-skin-support-appcompat = { group = "skin.support", name = "skin-support-appcompat", version.ref = "skin-support" }
-skin-support-design = { group = "skin.support", name = "skin-support-design", version.ref = "skin-support" }
-skin-support-cardview = { group = "skin.support", name = "skin-support-cardview", version.ref = "skin-support" }
-skin-support-constraint-layout = { group = "skin.support", name = "skin-support-constraint-layout", version.ref = "skin-support" }
+skinSupport = { group = "skin.support", name = "skin-support", version.ref = "skin-support" }
+skinSupport-appcompat = { group = "skin.support", name = "skin-support-appcompat", version.ref = "skin-support" }
+skinSupport-design = { group = "skin.support", name = "skin-support-design", version.ref = "skin-support" }
+skinSupport-cardview = { group = "skin.support", name = "skin-support-cardview", version.ref = "skin-support" }
+skinSupport-constraint-layout = { group = "skin.support", name = "skin-support-constraint-layout", version.ref = "skin-support" }
 
 # 阿里相关
 # Arouter [Github](https://github.com/alibaba/ARouter)

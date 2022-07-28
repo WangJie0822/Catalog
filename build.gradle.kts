@@ -1,25 +1,15 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
-    `kotlin-dsl`
     `maven-publish`
     `version-catalog`
+    signing
 }
 
-group = "cn.wj"
-version = "1.0-SNAPSHOT"
-
-dependencies {
-    testImplementation(kotlin("test"))
+val signingProp = java.util.Properties().apply {
+    load(rootProject.file("signing.properties").inputStream())
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
-
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "11"
-}
+group = "io.github.wangjie0822"
+version = "1.1.1"
 
 catalog {
     // declare the aliases, bundles and versions in this block
@@ -31,13 +21,33 @@ catalog {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = "cn.wj"
             artifactId = "catalog"
-            version = "1.0"
             from(components["versionCatalog"])
         }
     }
     repositories {
+        mavenLocal()
+        maven {
+            name = "mavenCentral"
+            val url = if (version.toString().endsWith("SNAPSHOT")) {
+                "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+            } else {
+                "https://s01.oss.sonatype.org/content/repositories/releases/"
+            }
+            setUrl(url)
+            credentials {
+                username = signingProp.getProperty("mavenCentralUsername")
+                password = signingProp.getProperty("mavenCentralPassword")
+            }
 
+        }
     }
+}
+
+ext.set("signing.keyId", signingProp.getProperty("signing.keyId"))
+ext.set("signing.password", signingProp.getProperty("signing.password"))
+ext.set("signing.secretKeyRingFile", signingProp.getProperty("signing.secretKeyRingFile"))
+
+signing {
+    sign(publishing.publications)
 }
