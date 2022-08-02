@@ -9,7 +9,7 @@ val signingProp = java.util.Properties().apply {
 }
 
 group = "io.github.wangjie0822"
-version = "1.1.1"
+version = "1.1.2"
 
 catalog {
     // declare the aliases, bundles and versions in this block
