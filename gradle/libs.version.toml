@@ -8,7 +8,7 @@ jsoup = "1.15.2"
 # LiveEventBus [Github](https://github.com/JeremyLiao/LiveEventBus)
 jeremyliao-liveEventBus = "1.8.0"
 # 图标控件 [Github](https://github.com/PhilJay/MPAndroidChart)
-philJay-MPAndroidChart = "v3.1.0"
+philJay-mpAndroidChart = "v3.1.0"
 
 # kotlin [指南](https://kotlinlang.org/)
 kotlin = "1.7.10"
@@ -118,7 +118,7 @@ jsoup = { group = "org.jsoup", name = "jsoup", version.ref = "jsoup" }
 # LiveEventBus [Github](https://github.com/JeremyLiao/LiveEventBus)
 jeremyliao-liveEventBus = { group = "io.github.jeremyliao", name = "live-event-bus", version.ref = "jeremyliao-liveEventBus" }
 # 图标控件 [Github](https://github.com/PhilJay/MPAndroidChart)
-philJay-MPAndroidChart = { group = "com.github.PhilJay", name = "MPAndroidChart", version.ref = "philJay-MPAndroidChart" }
+philJay-mpAndroidChart = { group = "com.github.PhilJay", name = "MPAndroidChart", version.ref = "philJay-mpAndroidChart" }
 
 # kotlin [指南](https://kotlinlang.org/)
 kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
