@@ -79,10 +79,10 @@ squareup-okhttp3 = "4.10.0"
 # Retrofit2 [Github](https://github.com/square/retrofit) [指南](https://square.github.io/retrofit/)
 squareup-retrofit2 = "2.9.0"
 # [Github](https://github.com/JakeWharton/retrofit2-kotlinx-serialization-converter)
-squareup-retrofit2-converter-kotlin = "0.8.0"
+jakeWharton-retrofit2-converter-kotlin = "0.8.0"
 
 # SmartRefreshLayout [Github](https://github.com/scwang90/SmartRefreshLayout)
-scwang-smart = "2.0.5"
+scwang90-refresh = "2.0.5"
 # 状态栏工具 [Github](https://github.com/gyf-dev/ImmersionBar)
 geyifeng-immersionbar = "3.2.2"
 
@@ -279,12 +279,12 @@ squareup-okhttp3-logging = { group = "com.squareup.okhttp3", name = "logging-int
 squareup-retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "squareup-retrofit2" }
 squareup-retrofit2-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "squareup-retrofit2" }
 squareup-retrofit2-converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "squareup-retrofit2" }
-squareup-retrofit2-converter-kotlin = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "squareup-retrofit2-converter-kotlin" }
+jakeWharton-retrofit2-converter-kotlin = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "jakeWharton-retrofit2-converter-kotlin" }
 
 # SmartRefreshLayout [Github](https://github.com/scwang90/SmartRefreshLayout)
-scwang-smartRefresh-layout = { group = "com.scwang.smart", name = "refresh-layout-kernel", version.ref = "scwang-smart" }
-scwang-smartRefresh-classicsHeader = { group = "com.scwang.smart", name = "refresh-header-classics", version.ref = "scwang-smart" }
-scwang-smartRefresh-classicsFooter = { group = "com.scwang.smart", name = "refresh-footer-classics", version.ref = "scwang-smart" }
+scwang90-refresh-layout = { group = "io.github.scwang90", name = "refresh-layout-kernel", version.ref = "scwang90-refresh" }
+scwang90-refresh-classicsHeader = { group = "io.github.scwang90", name = "refresh-header-classics", version.ref = "scwang90-refresh" }
+scwang90-refresh-classicsFooter = { group = "io.github.scwang90", name = "refresh-footer-classics", version.ref = "scwang90-refresh" }
 
 # 状态栏工具 [Github](https://github.com/gyf-dev/ImmersionBar)
 geyifeng-immersionbar = { group = "com.geyifeng.immersionbar", name = "immersionbar", version.ref = "geyifeng-immersionbar" }

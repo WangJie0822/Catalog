@@ -9,7 +9,7 @@ val signingProp = java.util.Properties().apply {
 }
 
 group = "io.github.wangjie0822"
-version = "gradle.7.4.2-1.2.0"
+version = "gradle.7.4.2-1.2.1"
 
 catalog {
     // declare the aliases, bundles and versions in this block
